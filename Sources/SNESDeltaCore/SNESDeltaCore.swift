@@ -10,29 +10,16 @@ import Foundation
 import AVFoundation
 
 import DeltaCore
+@_exported import SNESSwift
+@_exported import SNESBridge
 
-@objc public enum SNESGameInput: Int, Input
-{
-    case up     = 1
-    case down   = 2
-    case left   = 4
-    case right  = 8
-    case a      = 16
-    case b      = 32
-    case x      = 64
-    case y      = 128
-    case l      = 256
-    case r      = 512
-    case start  = 1024
-    case select = 2048
-    
+extension SNESGameInput: Input {
     public var type: InputType {
         return .game(.snes)
     }
 }
 
-public struct SNES: DeltaCoreProtocol
-{
+public struct SNES: DeltaCoreProtocol {
     public static let core = SNES()
     
     public var name: String { "SNESDeltaCore" }
@@ -51,8 +38,10 @@ public struct SNES: DeltaCoreProtocol
         return [gameGenieFormat, proActionReplayFormat]
     }
     
-    public var emulatorBridge: EmulatorBridging { SNESEmulatorBridge.shared }
-        
+    public var emulatorBridge: EmulatorBridging { SNESEmulatorBridge.shared as! EmulatorBridging }
+
+    public var resourceBundle: Bundle { Bundle.module }
+
     private init()
     {
     }

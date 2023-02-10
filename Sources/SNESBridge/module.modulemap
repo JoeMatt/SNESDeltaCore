@@ -1,0 +1,5 @@
+module SNESBridge {
+    header "SNESEmulatorBridge.h"
+    header "SNESTypes.h"
+    export *
+}

@@ -1,0 +1,1 @@
+../snes9x/fxinst.h

@@ -1,0 +1,1 @@
+../snes9x/conffile.h

@@ -8,28 +8,17 @@
 
 #import "SNESEmulatorBridge.h"
 
-// Snes9x
-#include "snes9x.h"
-#include "apu.h"
-#include "snapshot.h"
-#include "snes9x/memmap.h"
-#include "controls.h"
-#include "display.h"
-#include "snes9x/cheats.h"
+// snes9x
+@import snes9xCore;
+// DeltaCore
+@import DeltaCore;
+@import DeltaTypes;
+
+// SNESSwift
+@import SNESSwift;
 
 // System
 #include <sys/time.h>
-
-// DeltaCore
-#import <SNESDeltaCore/SNESDeltaCore.h>
-#import <DeltaCore/DeltaCore.h>
-#import <DeltaCore/DeltaCore-Swift.h>
-
-#if STATIC_LIBRARY
-#import "SNESDeltaCore-Swift.h"
-#else
-#import <SNESDeltaCore/SNESDeltaCore-Swift.h>
-#endif
 
 class ConfigFile;
 
@@ -252,11 +241,11 @@ void SNESFinalizeSamplesCallback(void *context);
         uint32 address = 0;
         uint8 byte = 0;
         
-        if ([type isEqualToString:CheatTypeGameGenie])
+        if ([type isEqualToString:@"GameGenie"])
         {
             success = (S9xGameGenieToRaw([code UTF8String], address, byte) == NULL);
         }
-        else if ([type isEqualToString:CheatTypeActionReplay])
+        else if ([type isEqualToString:@"ActionReplay"])
         {
             success = (S9xProActionReplayToRaw([code UTF8String], address, byte) == NULL);
         }

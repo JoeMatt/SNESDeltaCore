@@ -1,0 +1,10 @@
+module snes9xCore {
+    header "apu.h"
+    header "snes9x.h"
+    header "memmap.h"
+    header "snapshot.h"
+    header "controls.h"
+    header "display.h"
+    header "cheats.h"
+    requires cplusplus
+}

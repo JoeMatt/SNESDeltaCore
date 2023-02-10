@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B30645442991B30C0068F467 /* DeltaCore in Frameworks */ = {isa = PBXBuildFile; productRef = B30645432991B30C0068F467 /* DeltaCore */; };
+		B34942862991C4F2000DDC33 /* DeltaTypes in Frameworks */ = {isa = PBXBuildFile; productRef = B34942852991C4F2000DDC33 /* DeltaTypes */; };
+		B349428C2991C54D000DDC33 /* DeltaCore in Frameworks */ = {isa = PBXBuildFile; productRef = B349428B2991C54D000DDC33 /* DeltaCore */; };
 		BF02F6FE1D300B4A0000D872 /* Standard.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = BF02F6FD1D300B4A0000D872 /* Standard.deltaskin */; };
 		BF3F86B11F40F9150095F38A /* Standard.deltamapping in Resources */ = {isa = PBXBuildFile; fileRef = BF3F86B01F40F7FB0095F38A /* Standard.deltamapping */; };
 		BF69FBCD23E3AB110051BEEA /* SNESTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = BF69FBCB23E3AB110051BEEA /* SNESTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -331,8 +332,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B30645442991B30C0068F467 /* DeltaCore in Frameworks */,
+				B34942862991C4F2000DDC33 /* DeltaTypes in Frameworks */,
 				BF6D1D5D1EB403D600476805 /* libSnes9x.a in Frameworks */,
+				B349428C2991C54D000DDC33 /* DeltaCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,7 +731,8 @@
 			);
 			name = SNESDeltaCore;
 			packageProductDependencies = (
-				B30645432991B30C0068F467 /* DeltaCore */,
+				B34942852991C4F2000DDC33 /* DeltaTypes */,
+				B349428B2991C54D000DDC33 /* DeltaCore */,
 			);
 			productName = SNESDeltaCore;
 			productReference = BF9F4FDC1AAD8070004C9500 /* SNESDeltaCore.framework */;
@@ -1070,7 +1073,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/snes9x/apu/bapu\"",
-					"\"$(SRCROOT)/../DeltaCore/DeltaCore/include\"",
+					"\"$(SRCROOT)/../DeltaCore/Sources/DeltaTypes/include\"",
+					"\"$(SRCROOT)/../DeltaCore/Sources/DeltaCore/include\"",
 				);
 				INFOPLIST_FILE = SNESDeltaCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1098,7 +1102,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/snes9x/apu/bapu\"",
-					"\"$(SRCROOT)/../DeltaCore/DeltaCore/include\"",
+					"\"$(SRCROOT)/../DeltaCore/Sources/DeltaTypes/include\"",
+					"\"$(SRCROOT)/../DeltaCore/Sources/DeltaCore/include\"",
 				);
 				INFOPLIST_FILE = SNESDeltaCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1149,7 +1154,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B30645432991B30C0068F467 /* DeltaCore */ = {
+		B34942852991C4F2000DDC33 /* DeltaTypes */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DeltaTypes;
+		};
+		B349428B2991C54D000DDC33 /* DeltaCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DeltaCore;
 		};

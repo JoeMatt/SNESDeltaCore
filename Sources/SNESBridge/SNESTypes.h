@@ -6,10 +6,10 @@
 //  Copyright © 2020 Riley Testut. All rights reserved.
 //
 
-#import <DeltaCore/DeltaTypes.h>
+#import <DeltaTypes/DeltaTypes.h>
 
 // Extensible Enums
 FOUNDATION_EXPORT GameType const GameTypeSNES NS_SWIFT_NAME(snes);
 
-FOUNDATION_EXPORT CheatType const CheatTypeActionReplay;
-FOUNDATION_EXPORT CheatType const CheatTypeGameGenie;
+FOUNDATION_EXPORT CheatType const CheatTypeActionReplay NS_SWIFT_NAME(CheatTypeActionReplay);
+FOUNDATION_EXPORT CheatType const CheatTypeGameGenie NS_SWIFT_NAME(CheatTypeGameGenie);
