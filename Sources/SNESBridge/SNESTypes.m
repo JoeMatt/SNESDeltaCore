@@ -11,4 +11,4 @@
 GameType const GameTypeSNES = @"com.rileytestut.delta.game.snes";
 
 CheatType const CheatTypeActionReplay = @"ActionReplay";
-CheatType const CheatTypeGameGenie = @"GameGenie";
+//CheatType const CheatTypeGameGenie = @"GameGenie";

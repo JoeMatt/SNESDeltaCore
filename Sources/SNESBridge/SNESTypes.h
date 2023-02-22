@@ -12,4 +12,6 @@
 FOUNDATION_EXPORT GameType const GameTypeSNES NS_SWIFT_NAME(snes);
 
 FOUNDATION_EXPORT CheatType const CheatTypeActionReplay NS_SWIFT_NAME(CheatTypeActionReplay);
-FOUNDATION_EXPORT CheatType const CheatTypeGameGenie NS_SWIFT_NAME(CheatTypeGameGenie);
+
+// TODO: This conflicts with the other defintions in the other cores when linking
+//FOUNDATION_EXPORT CheatType const CheatTypeGameGenie NS_SWIFT_NAME(CheatTypeGameGenie);
